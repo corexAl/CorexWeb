@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COREX — Centralized Organized Reasoning &amp; Extraction Matrix</title>
+<link rel="icon" href="assets/corex.png">
+<style>
+  :root{
+    --bg:#161513;
+    --ink:#EDE7D8;
+    --dim:#95907F;
+    --line:#39362E;
+  }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; }
+
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family: ui-monospace, "SF Mono", "IBM Plex Mono", Consolas, monospace;
+    font-size:16px;
+    line-height:1.5;
+  }
+
+  a{ color:var(--ink); }
+  a:hover{ color:var(--ink); text-decoration:none; }
+
+  .wrap{
+    max-width:680px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  header{
+    padding:28px 0 24px;
+    border-bottom:1px solid var(--line);
+  }
+  header .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:bold;
+  }
+  .brand img{ width:24px; height:24px; }
+  header nav a{
+    margin-left:18px;
+    font-size:14px;
+    color:var(--dim);
+  }
+  header nav a:hover{ color:var(--ink); }
+
+  .hero{ padding:56px 0 40px; }
+  .hero img.mark{
+    width:88px;
+    height:88px;
+    display:block;
+    margin-bottom:24px;
+  }
+  .hero h1{
+    font-size:40px;
+    margin:0 0 6px;
+    letter-spacing:-0.5px;
+  }
+  .hero .full{
+    color:var(--dim);
+    font-size:14px;
+    margin:0 0 22px;
+  }
+  .hero p{
+    max-width:56ch;
+    color:#CFC9B8;
+  }
+
+  .links{ margin-top:26px; }
+  .links a{
+    display:inline-block;
+    margin-right:16px;
+    padding-bottom:2px;
+    border-bottom:1px solid var(--dim);
+  }
+  .links a:hover{ border-color:var(--ink); }
+
+  section{
+    padding:36px 0;
+    border-top:1px solid var(--line);
+  }
+  section h2{
+    font-size:18px;
+    margin:0 0 18px;
+  }
+  section h2 .n{ color:var(--dim); font-weight:normal; }
+
+  ul.plain{
+    list-style:none;
+    margin:0; padding:0;
+  }
+  ul.plain li{
+    padding:14px 0;
+    border-top:1px solid var(--line);
+  }
+  ul.plain li:first-child{ border-top:none; }
+  ul.plain li b{ display:block; margin-bottom:4px; }
+  ul.plain li span{ color:var(--dim); font-size:14.5px; }
+
+  ol.steps{
+    margin:0; padding:0 0 0 20px;
+  }
+  ol.steps li{ padding:8px 0; color:#CFC9B8; }
+  ol.steps li b{ color:var(--ink); }
+
+  pre{
+    background:#0F0E0C;
+    border:1px solid var(--line);
+    padding:16px;
+    font-size:13.5px;
+    overflow-x:auto;
+    white-space:pre-wrap;
+  }
+
+  footer{
+    padding:32px 0 60px;
+    color:var(--dim);
+    font-size:13.5px;
+  }
+  footer .wrap{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    border-top:1px solid var(--line);
+    padding-top:20px;
+  }
+
+  @media (max-width:520px){
+    .hero h1{ font-size:32px; }
+    header nav a{ margin-left:12px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <img src="assets/corex.png" alt="COREX">
+      COREX
+    </div>
+    <nav>
+      <a href="#what">What it does</a>
+      <a href="#how">How it works</a>
+      <a href="#access">Access</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <img class="mark" src="assets/corex.png" alt="">
+    <h1>COREX</h1>
+    <p class="full">Centralized Organized Reasoning &amp; Extraction Matrix</p>
+    <p>A language model built to converge before it answers. It takes messy, scattered, or contradictory input, reasons through it in one pass, and hands back a structured result — not a paragraph you have to pick apart yourself.</p>
+    <div class="links">
+      <a href="#access">Request access</a>
+      <a href="#how">Read how it works</a>
+    </div>
+  </div>
+</div>
+
+<section id="what">
+  <div class="wrap">
+    <h2><span class="n">01 /</span> What it does</h2>
+    <ul class="plain">
+      <li><b>Reasoning</b><span>Works through multi-step questions instead of pattern-matching to the nearest answer.</span></li>
+      <li><b>Extraction</b><span>Pulls structured fields and entities out of contracts, transcripts, and messy text.</span></li>
+      <li><b>Retrieval</b><span>Grounds answers in your own sources first, and says so plainly when it can't find one.</span></li>
+      <li><b>Verification</b><span>Checks its own output against the source before returning it.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2><span class="n">02 /</span> How a request moves through it</h2>
+    <ol class="steps">
+      <li><b>Ingest</b> — raw text, files, or API payloads come in as-is.</li>
+      <li><b>Parse</b> — the input is broken into claims, facts, and instructions.</li>
+      <li><b>Reason</b> — the core weighs the evidence and drafts an answer.</li>
+      <li><b>Extract</b> — structured fields are pulled from that draft.</li>
+      <li><b>Verify</b> — the answer is checked back against the source.</li>
+      <li><b>Return</b> — you get the answer, plus where it came from.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="access">
+  <div class="wrap">
+    <h2><span class="n">03 /</span> Access</h2>
+    <p>It sits behind a small API. Send a request, get a structured, verified answer back.</p>
+    <pre>$ curl https://api.corex.ai/v1/reason \
+    -H "Authorization: Bearer $COREX_KEY" \
+    -d '{"input": "summarize section 4.2 and flag risk terms"}'
+
+→ 200 OK
+{
+  "answer": "...",
+  "confidence": 0.94,
+  "source": "contract.pdf#p4"
+}</pre>
+    <p style="margin-top:18px;">Early access is rolling out to a handful of teams first. <a href="mailto:access@corex.ai" style="border-bottom:1px solid var(--dim);">Email access@corex.ai</a> to get on the list.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>COREX — Centralized Organized Reasoning &amp; Extraction Matrix</div>
+    <div>Built 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>
